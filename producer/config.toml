@@ -1,0 +1,3 @@
+[config]
+server=kafka-stack-cp-kafka-headless.data-platform:9092
+topic=test

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kafka-pubsub-consumer
+  name: kafka-pubsub-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-pubsub-consumer
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kafka-pubsub-consumer
+    spec:
+      containers:
+      - image: aanogueira/kafka-pubsub-consumer:0.0.1
+        imagePullPolicy: Always
+        name: kafka-pubsub-consumer
+        resources: {}
+status: {}

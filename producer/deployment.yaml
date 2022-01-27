@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kafka-pubsub-producer
+  name: kafka-pubsub-producer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-pubsub-producer
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kafka-pubsub-producer
+    spec:
+      containers:
+      - image: aanogueira/kafka-pubsub-producer:0.0.1
+        imagePullPolicy: Always
+        name: kafka-pubsub-producer
+        resources: {}
+status: {}

@@ -1,0 +1,9 @@
+apiVersion: kafka.steeleye.co/v1
+kind: KafkaTopic
+metadata:
+  name: test
+  namespace: data-platform
+spec:
+  name: test
+  partitions: 1
+  replicas: 2
